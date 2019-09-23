@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <style>
+      body {
+        background-color: #485b93;
+        font-family: Futura,Tahoma,Geneva,sans-serif;
+        font-size: 1.2em;
+      }
+      .header {
+        height: 800px;
+      }
+      .nav {
+        background-color: #0a0b10;
+        display: flex;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+      }
+      .skip-to-content {
+        display: none;
+      }
+      .nav__svg {
+        position: absolute;
+        z-index: 6;
+      }
+      .nav__menu {
+        align-items: baseline;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        list-style: none;
+        width: 100%;
+        z-index: 10;
+      }
+      .nav__menu-button {
+        display: none;
+      }
+      .nav__link {
+        color: #fff;
+        margin: 0 10px;
+        text-decoration: none;
+      }
+      .header__container {
+        visibility: hidden;
+      }
+      .main {
+        visibility: hidden;
+      }
+      .footer {
+        visibility: hidden;
+      }
+    </style>
+
+    <link href="https://fonts.googleapis.com/css?family=Domine&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/uli.1.1.0.css">
+    <title>Uli Troyo</title>
+  </head>
+
+  <body>
+    <header class="header" role="banner">
+      <nav class="nav" id="main-nav" aria-label="Main Navigation">
+        <a href="#main" class="skip-to-content">Skip to main content</a>
+        <svg id="uli-logo" class="nav__svg" xmlns="http://www.w3.org/2000/svg" xmlns:serif="http://www.serif.com/" xmlns:xlink="http://www.w3.org/1999/xlink" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" clip-rule="evenodd" viewBox="0 0 650 550" width="200">
+          <a class="nav__home" href="/">
+            <g role="image" alt="Uli Troyo's logo, which is also a link to home" id="uli-troyo" transform="translate(25 50)">
+              <g id="shadows" fill="#161621">
+                <path class="i shadow" fill-rule="nonzero" d="M349.401 7.345c1.561.01 3.125.168 4.63.543 10.311 2.696 20.595 5.491 30.882 8.275 6.997 1.931 12.519 8.142 14.611 15.04 3.266 10.768.022 23.081-6.665 31.964-2.534 3.367-5.843 6.08-9.431 8.143-2.524 1.452-5.228 2.621-8.098 3.186l-.086.016 23.444 6.282v125.592l-39.729 10.645-36.319-9.732V81.708l36.164-9.69c-7.536-2.019-15.067-4.013-22.588-6.052-4.576-1.27-8.618-4.181-11.362-8.194-6.765-9.896-5.526-24.236.767-34.591.204-.336.41-.67.619-1.003 3.429-5.464 8.118-10.195 14.09-12.908 2.837-1.289 5.94-1.928 9.071-1.925z"/>
+                <path class="l shadow" fill-rule="nonzero" d="M339.636 24.357V221.95l-39.73 10.646-36.319-9.732V25.271l39.73-10.646 36.319 9.732z"/>
+                <path class="u shadow" fill-rule="nonzero" d="M279.472 57.74c0 34.705.026 69.41 0 104.114-.053 23.886-3.828 48.882-17.883 67.996-6.044 8.22-13.868 15.105-22.668 20.297-9.191 5.423-19.256 9.063-29.847 11.503-10.059 2.317-20.604 3.096-30.593.492a5989.486 5989.486 0 0 1-28.874-7.736c-8.809-2.401-16.898-6.789-22.696-14.739-6.962-9.548-9.843-21.432-11.275-32.98-.837-6.758-1.145-13.572-1.15-20.406V82.485l42.532-11.397 36.319 9.732v97.63c.051 4.888.069 9.779.453 14.653l.008.099c5.067-7.093 6.365-16.245 6.753-24.945.167-3.745.253-7.495.257-11.244V59.355l42.345-11.347 36.319 9.732z"/>
+                <path class="o2 shadow" d="M517.908 175.472c2.897.011 5.788.25 8.638.737 1.426.25 2.844.587 4.261.927l.149.036c11.014 2.778 22.02 5.704 32.955 8.947 14.222 4.219 25.347 17.13 29.728 31.606 5.117 16.908 3.402 35.647-2.593 51.73-7.196 19.309-21.064 36.207-39.35 46.161-12.936 7.043-27.728 11.092-42.404 8.829-5.443-.839-10.776-2.445-16.136-3.891-7.874-2.125-15.675-4.18-23.545-6.665-4.975-1.57-9.754-4.825-13.637-8.414-13.82-12.774-18.212-33.795-16.418-52.786 2.392-25.312 16.678-49.131 37.459-63.658 11.769-8.227 26.099-13.41 40.304-13.557.196-.002.393-.002.589-.002z"/>
+                <path class="y shadow" fill-rule="nonzero" d="M480.634 208.045l-80.501 204.227-42.336 11.344-38.34-10.273 34.137-86.452-48.515-92.35 47.908-12.837 34.545 9.256 1.897 3.904 9.537-25.48 43.332-11.611 38.336 10.272z"/>
+                <path class="o1 shadow" d="M273.162 240.873c2.889.012 5.788.25 8.638.738 1.426.249 2.845.587 4.261.926l.15.037c11.013 2.779 22.019 5.703 32.955 8.947 14.216 4.218 25.347 17.131 29.728 31.605 5.152 17.025 3.356 35.88-2.671 51.938-7.256 19.336-21.155 36.155-39.463 46.057-13.823 7.477-30.002 11.451-45.072 8.185-12.238-2.651-24.079-6.257-36.11-9.805-5.428-1.6-10.43-4.971-14.481-8.746-7.392-6.891-12.218-16.312-14.592-26.136-5.346-22.128-.298-46.208 11.825-65.201 11.445-17.932 29.502-31.958 50.534-36.839 4.692-1.089 9.453-1.707 14.298-1.706z"/>
+                <path class="r shadow" fill-rule="nonzero" d="M220.399 273.922v52.059c-2.656-.895-5.308-1.802-7.968-2.685-7.943-2.591-17.48.93-22.739 7.177-6.201 7.366-7.396 17.75-7.409 26.797v55.228l-39.73 10.646-36.318-9.732V287.093l39.729-10.645 8.31 2.226c.129-.132.26-.263.39-.393 5.846-5.819 13.212-10.153 21.161-12.333 2.579-.696 5.151-1.388 7.819-1.535l1.07-.053 35.685 9.562z"/>
+                <path class="t shadow" fill-rule="nonzero" d="M142.351 242.867v46.775l-30.082 8.061v133.555l-42.532 11.397-36.319-9.732V315.489l-30.082-8.061v-46.775l102.696-27.518 36.319 9.732z"/>
+              </g>
+              <g id="uli" fill-rule="nonzero">
+                <g class="i">
+                  <path class="side" fill="#4c5081" d="M328.551 86.244l30.408 8.147-.017 116.516-30.391-8.143V86.244zm9.312-25.956a13.64 13.64 0 0 1-5.949-3.338c-1.744-1.652-3.114-3.746-4.11-6.28-.997-2.534-1.495-5.391-1.495-8.571 0-3.18.498-6.304 1.495-9.373a33.903 33.903 0 0 1 3.471-7.498l30.408 8.148a33.951 33.951 0 0 0-3.472 7.498 30.174 30.174 0 0 0-1.495 9.372c0 .743.028 1.469.082 2.176.178 2.322.649 4.453 1.413 6.396.997 2.534 2.367 4.627 4.111 6.28a13.634 13.634 0 0 0 5.37 3.17l-29.829-7.98z"/>
+                  <path class="top" fill="#7084aa" d="M392.777 85.33l-33.818 9.061-30.408-8.147 33.819-9.062 30.407 8.148zm-28.434-55.621a31.17 31.17 0 0 0-2.021 2.682c-.219.324-.432.653-.639.985l-30.408-8.148c.207-.332.42-.66.639-.985 1.744-2.587 3.768-4.795 6.073-6.624 2.304-1.829 4.764-3.094 7.38-3.795 2.616-.701 5.076-.754 7.38-.16l.135.035h-.001l30.408 8.148-.134-.036c-2.305-.593-4.765-.54-7.381.161-2.615.701-5.075 1.966-7.38 3.795a28.377 28.377 0 0 0-4.051 3.942z"/>
+                  <path class="face" fill="#f5f5f5" d="M392.777 85.33v116.52l-33.818 9.062V94.391l33.818-9.061zm-36.061-35.084c0-3.18.499-6.304 1.495-9.372a33.747 33.747 0 0 1 4.111-8.483c1.744-2.588 3.768-4.796 6.072-6.624 2.305-1.829 4.765-3.094 7.38-3.795 2.616-.701 5.076-.754 7.381-.161a13.656 13.656 0 0 1 6.072 3.37c1.744 1.653 3.114 3.747 4.111 6.281.996 2.534 1.495 5.391 1.495 8.571 0 3.18-.499 6.304-1.495 9.373a33.747 33.747 0 0 1-4.111 8.483c-1.744 2.587-3.768 4.795-6.072 6.624-2.305 1.829-4.765 3.094-7.381 3.795-2.615.7-5.075.754-7.38.16a13.646 13.646 0 0 1-6.072-3.37c-1.744-1.653-3.114-3.746-4.111-6.28-.996-2.535-1.495-5.392-1.495-8.572z"/>
+                </g>
+                <g class="l">
+                  <path class="side" fill="#4c5081" d="M269.498 29.806l30.408 8.148v188.522l-30.408-8.147V29.806z"/>
+                  <path class="top" fill="#7084aa" d="M333.725 28.892l-33.819 9.062-30.408-8.148 33.819-9.061 30.408 8.147z"/>
+                  <path class="face" fill="#f5f5f5" d="M333.725 28.892v188.523l-33.819 9.061V37.954l33.819-9.062z"/>
+                </g>
+                <g class="u">
+                  <path class="side" fill="#4c5081" d="M151.447 248.78c-6.21-1.664-11.266-3.742-15.916-8.183-10.052-9.601-15.134-27.668-15.134-54.319V87.02l30.408 8.148v99.258c0 26.651 5.044 44.757 15.134 54.319.234.222.472.44.712.654 3.696 3.292 8.077 5.618 13.142 6.976l-28.346-7.595zm55.272-184.89l30.407 8.148v93.126c0 4.997-.155 10.149-.467 15.456-.311 5.308-1.276 10.299-2.896 14.972a35.767 35.767 0 0 1-1.05 2.685l-30.407-8.148a36.8 36.8 0 0 0 1.05-2.684c1.619-4.674 2.584-9.665 2.896-14.972.311-5.308.467-10.46.467-15.457V63.89z"/>
+                  <path class="top" fill="#7084aa" d="M187.426 85.355l-36.621 9.813-30.408-8.148 36.621-9.812 30.408 8.147zm14.88 104.774c7.755 2.079 21.934 5.958 30.376 8.22a33.966 33.966 0 0 1-6.299 9.555c-3.301 3.535-8.003 6.12-14.107 7.755-6.103 1.636-10.837 1.579-14.2-.17-3.363-1.748-5.823-4.534-7.38-8.357a33.062 33.062 0 0 1-.951-2.662c2.45-1.318 4.527-2.889 6.23-4.713a33.951 33.951 0 0 0 6.331-9.628zm4.413-126.239l30.407 8.148 36.435-9.763-30.408-8.147-36.434 9.762z"/>
+                  <path class="face" fill="#f5f5f5" d="M187.426 85.355v93.126c0 4.997.156 10.066.467 15.206.312 5.141 1.246 9.623 2.803 13.445 1.557 3.823 4.017 6.609 7.38 8.357 3.363 1.749 8.097 1.806 14.2.17 6.104-1.635 10.806-4.22 14.107-7.755 3.301-3.534 5.761-7.638 7.38-12.312 1.62-4.673 2.585-9.664 2.896-14.972.312-5.307.467-10.459.467-15.456V72.038l36.435-9.763v99.259c0 26.65-5.014 47.451-15.041 62.404-10.027 14.952-25.442 25.215-46.244 30.788-20.802 5.574-36.247 3.58-46.337-5.981-10.09-9.562-15.134-27.668-15.134-54.319V95.168l36.621-9.813z"/>
+                </g>
+              </g>
+              <g id="troyo">
+                <g class="o2">
+                  <path class="side" fill="#4c5081" d="M465.894 206.7l30.407 8.148a82.734 82.734 0 0 0-4.537 5.6c-5.107 6.895-9.093 14.474-11.958 22.737-2.865 8.264-4.297 16.711-4.297 25.342 0 9.54 1.432 17.825 4.297 24.855 2.865 7.031 6.82 12.672 11.865 16.923.116.098.233.195.351.292 3.773 3.099 8.077 5.348 12.911 6.747l.033.017-30.408-8.148.036.003c-5.013-1.441-9.457-3.794-13.331-7.059-5.045-4.251-9-9.892-11.865-16.922-2.864-7.031-4.297-15.316-4.297-24.856 0-8.631 1.433-17.078 4.297-25.341 2.865-8.263 6.851-15.843 11.958-22.738a82.748 82.748 0 0 1 4.538-5.6zm57.661 25.648c.327-.278.661-.549 1-.812 2.678-2.081 5.512-3.521 8.502-4.322 2.989-.801 5.823-.879 8.501-.234 2.678.645 4.982 1.92 6.913 3.826 1.931 1.905 3.488 4.327 4.671 7.266 1.184 2.938 1.775 6.225 1.775 9.859 0 3.785-.591 7.465-1.775 11.037a43.094 43.094 0 0 1-2.637 6.29l-30.407-8.147a43.186 43.186 0 0 0 2.637-6.29 34.892 34.892 0 0 0 1.775-11.038c0-2.666-.319-5.144-.955-7.435z"/>
+                  <path class="top" fill="#7084aa" d="M543.444 189.65c-3.351.311-6.813.946-10.387 1.903-8.346 2.237-16.038 5.887-23.076 10.953a82.876 82.876 0 0 0-13.68 12.342l-30.407-8.148a82.885 82.885 0 0 1 13.68-12.342c7.038-5.065 14.729-8.716 23.075-10.952 8.221-2.203 15.851-2.695 22.888-1.477a45.3 45.3 0 0 1 4.003.877h-.001l30.408 8.148a45.357 45.357 0 0 0-4.002-.877c-3.978-.689-8.145-.831-12.501-.427zm-23.346 67.461l30.407 8.147a38.926 38.926 0 0 1-2.034 3.479c-1.931 2.941-4.235 5.451-6.913 7.531-2.678 2.081-5.512 3.521-8.501 4.322-2.99.801-5.824.879-8.502.234-2.678-.645-4.982-1.92-6.913-3.826-1.931-1.905-3.488-4.327-4.671-7.266a21.908 21.908 0 0 1-.813-2.43c2.253-1.91 4.221-4.148 5.906-6.712a39.56 39.56 0 0 0 2.034-3.479z"/>
+                  <path class="face" fill="#f5f5f5" fill-rule="nonzero" d="M511.196 259.419c0 3.937.592 7.375 1.775 10.313 1.183 2.939 2.74 5.361 4.671 7.266 1.931 1.906 4.235 3.181 6.913 3.826s5.512.567 8.502-.234c2.989-.801 5.823-2.241 8.501-4.322 2.678-2.08 4.982-4.59 6.913-7.531 1.931-2.94 3.488-6.196 4.671-9.769a34.857 34.857 0 0 0 1.775-11.037c0-3.634-.591-6.921-1.775-9.859-1.183-2.939-2.74-5.361-4.671-7.266-1.931-1.906-4.235-3.181-6.913-3.826s-5.512-.567-8.501.234c-2.99.801-5.824 2.241-8.502 4.322-2.678 2.08-4.982 4.59-6.913 7.53-1.931 2.941-3.488 6.159-4.671 9.656a33.172 33.172 0 0 0-1.775 10.697zm-35.687 9.108c0-8.631 1.432-17.078 4.297-25.342 2.865-8.263 6.851-15.842 11.958-22.737 5.107-6.896 11.18-12.876 18.217-17.942 7.038-5.066 14.73-8.716 23.076-10.953 8.221-2.203 15.85-2.695 22.888-1.476 7.038 1.218 13.141 3.898 18.311 8.04 5.169 4.142 9.186 9.652 12.051 16.532 2.865 6.879 4.297 14.937 4.297 24.174s-1.463 18.071-4.39 26.502c-2.928 8.431-6.945 16.094-12.052 22.99-5.107 6.895-11.242 12.817-18.404 17.764-7.162 4.948-14.916 8.54-23.262 10.776-8.221 2.203-15.819 2.725-22.795 1.565-6.975-1.159-12.986-3.864-18.03-8.115-5.045-4.251-9-9.892-11.865-16.923-2.865-7.03-4.297-15.315-4.297-24.855z"/>
+                </g>
+                <g class="y" fill-rule="nonzero">
+                  <path class="side" fill="#4c5081" d="M313.75 238.337l30.408 8.147 46.337 88.205-30.408-8.148-46.337-88.204zm89.685-24.032l30.408 8.148-24.951 66.189-18.768-38.771 13.311-35.566z"/>
+                  <path class="top" fill="#7084aa" d="M360.087 326.541l30.408 8.148-32.698 82.808-30.407-8.148 32.697-82.808zm23.308-90.57l-39.237 10.513-30.408-8.147 39.237-10.514 30.408 8.148zm58.903-32.079l30.408 8.148-38.863 10.413-30.408-8.148 38.863-10.413z"/>
+                  <path class="face" fill="#f5f5f5" d="M390.495 334.689l-46.337-88.205 39.237-10.513 25.597 52.877 24.851-66.395 38.863-10.413-76.98 195.293-37.929 10.164 32.698-82.808z"/>
+                </g>
+                <g class="o1">
+                  <path class="side" fill="#4c5081" d="M221.148 272.206l30.408 8.148a82.428 82.428 0 0 0-4.537 5.6c-5.107 6.895-9.093 14.474-11.958 22.737-2.865 8.264-4.298 16.711-4.298 25.342 0 9.54 1.433 17.825 4.298 24.855 2.865 7.031 6.82 12.672 11.864 16.923l.352.292c3.773 3.099 8.077 5.348 12.911 6.747l.032.017-30.407-8.148.036.003c-5.013-1.441-9.457-3.794-13.331-7.059-5.045-4.251-9-9.892-11.865-16.922-2.865-7.031-4.297-15.316-4.297-24.856 0-8.631 1.432-17.078 4.297-25.341 2.865-8.263 6.851-15.843 11.958-22.738a82.734 82.734 0 0 1 4.537-5.6zm57.661 25.648c.328-.278.661-.549 1.001-.812 2.678-2.081 5.512-3.521 8.501-4.322 2.99-.802 5.823-.879 8.502-.234 2.678.645 4.982 1.92 6.913 3.826 1.931 1.905 3.488 4.327 4.671 7.266 1.183 2.938 1.775 6.225 1.775 9.859a34.89 34.89 0 0 1-1.775 11.037 43.094 43.094 0 0 1-2.637 6.29l-30.408-8.147a43.152 43.152 0 0 0 2.637-6.291 34.853 34.853 0 0 0 1.775-11.037c0-2.666-.318-5.144-.955-7.435z"/>
+                  <path class="top" fill="#7084aa" d="M298.699 255.156c-3.351.311-6.814.946-10.388 1.903-8.346 2.236-16.037 5.887-23.075 10.953a82.796 82.796 0 0 0-13.68 12.342l-30.408-8.148a82.925 82.925 0 0 1 13.68-12.342c7.038-5.065 14.73-8.716 23.076-10.952 8.221-2.203 15.85-2.695 22.888-1.477 1.369.237 2.703.529 4.002.877l30.408 8.148a45.357 45.357 0 0 0-4.002-.877c-3.978-.689-8.145-.831-12.501-.427zm-23.347 67.461l30.408 8.147a39.168 39.168 0 0 1-2.034 3.479c-1.931 2.94-4.235 5.451-6.913 7.531-2.679 2.081-5.512 3.521-8.502 4.322-2.989.801-5.823.879-8.501.234-2.678-.645-4.983-1.921-6.913-3.826-1.931-1.905-3.488-4.327-4.672-7.266a21.7 21.7 0 0 1-.812-2.43c2.253-1.91 4.221-4.148 5.905-6.712a39.067 39.067 0 0 0 2.034-3.479z"/>
+                  <path class="face" fill="#f5f5f5" fill-rule="nonzero" d="M266.45 324.925c0 3.937.592 7.375 1.775 10.313 1.184 2.939 2.741 5.361 4.672 7.266 1.93 1.905 4.235 3.181 6.913 3.826s5.512.567 8.501-.234c2.99-.801 5.823-2.241 8.502-4.322 2.678-2.08 4.982-4.591 6.913-7.531 1.931-2.94 3.488-6.196 4.671-9.769a34.89 34.89 0 0 0 1.775-11.037c0-3.634-.592-6.921-1.775-9.859-1.183-2.939-2.74-5.361-4.671-7.266-1.931-1.906-4.235-3.181-6.913-3.826-2.679-.645-5.512-.568-8.502.234-2.989.801-5.823 2.241-8.501 4.322-2.678 2.08-4.983 4.59-6.913 7.53-1.931 2.941-3.488 6.159-4.672 9.656a33.172 33.172 0 0 0-1.775 10.697zm-35.687 9.108c0-8.631 1.433-17.078 4.298-25.342 2.865-8.263 6.851-15.842 11.958-22.737 5.107-6.896 11.179-12.876 18.217-17.942 7.038-5.066 14.729-8.717 23.075-10.953 8.221-2.203 15.851-2.695 22.889-1.476 7.037 1.218 13.141 3.898 18.31 8.04 5.17 4.142 9.187 9.652 12.052 16.532 2.865 6.879 4.297 14.937 4.297 24.174s-1.464 18.071-4.391 26.502c-2.927 8.431-6.944 16.094-12.051 22.99-5.107 6.895-11.242 12.817-18.404 17.764-7.163 4.948-14.917 8.54-23.262 10.776-8.221 2.203-15.82 2.725-22.795 1.565-6.976-1.159-12.986-3.864-18.031-8.115-5.044-4.251-8.999-9.892-11.864-16.923-2.865-7.03-4.298-15.315-4.298-24.855z"/>
+                </g>
+                <g class="r" fill-rule="nonzero">
+                  <path class="side" fill="#4c5081" d="M112.146 291.617l30.407 8.147v117.26l-30.407-8.147v-117.26z"/>
+                  <path class="top" fill="#7084aa" d="M176.372 290.703l-33.819 9.061-30.407-8.147 33.818-9.062 30.408 8.148zm0 19.079v-19.079l-20.178-5.407a52.813 52.813 0 0 1 3.036-3.229c5.232-5.112 11.335-8.603 18.311-10.472l2.896-.776c1.059-.283 2.273-.457 3.643-.522l30.408 8.148c-1.37.064-2.585.238-3.643.522l-2.897.776c-6.975 1.869-13.079 5.36-18.31 10.471-5.15 5.032-9.515 11.431-13.096 19.197l-.17.371z"/>
+                  <path class="face" fill="#f5f5f5" d="M142.553 299.764l33.819-9.061v19.079c3.612-7.934 8.034-14.456 13.266-19.568 5.231-5.111 11.335-8.602 18.31-10.471l2.897-.776c1.058-.284 2.273-.458 3.643-.522v39.295c-4.484-1.525-9.342-1.586-14.574-.184-7.847 2.103-13.733 6.519-17.657 13.249-3.923 6.73-5.885 15.546-5.885 26.448v50.71l-33.819 9.061v-117.26z"/>
+                </g>
+                <g class="t" fill-rule="nonzero">
+                  <path class="side" fill="#4c5081" d="M9.247 265.188l30.408 8.148v37.704l30.082-8.06v133.555l-30.408-8.147V310.953l-30.082-8.06v-37.705z"/>
+                  <path class="top" fill="#7084aa" d="M136.44 247.402l-96.785 25.934-30.408-8.148 96.785-25.933 30.408 8.147z"/>
+                  <path class="face" fill="#f5f5f5" d="M106.358 293.167v133.556l-36.621 9.812V302.98l-30.082 8.06v-37.704l96.785-25.934v37.705l-30.082 8.06z"/>
+                </g>
+              </g>
+            </g>
+          </a>
+        </svg>
+        <button aria-haspopup="true" aria-controls="nav-menu" class="nav__menu-button" id="menu-button" type="button" aria-expanded="false">Menu</button>
+        <ul id="nav-menu" class="nav__menu" role="menu" aria-labelledby="menu-button">
+          <button type="button" id="menu-close" class="nav__menu-close">Close</button>
+          <li role="none">
+            <a href="/blog/" class="nav__link" role="menuitem">blog</a>
+          </li>
+          <svg class="divider" role="none" viewBox="0 0 6 6" width="6">
+            <circle cx="3" cy="3" r="3" fill="white" stroke-width="0"/>
+          </svg>
+
+          <li role="none">
+            <a href="#main" class="nav__link" role="menuitem">portfolio</a>
+          </li>
+          <svg class="divider" role="none" viewBox="0 0 6 6" width="6">
+            <circle cx="3" cy="3" r="3" fill="white" stroke-width="0"/>
+          </svg>
+
+          <li role="none">
+            <a href="/about/" class="nav__link" role="menuitem">about</a>
+          </li>
+          <svg class="divider" role="none" viewBox="0 0 6 6" width="6">
+            <circle cx="3" cy="3" r="3" fill="white" stroke-width="0"/>
+          </svg>
+
+          <li role="none">
+            <a href="/contact/" class="nav__link" role="menuitem">contact</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="header__container">
+        <img class="header__img" src="https://res.cloudinary.com/ulitroyo/image/upload/v1565925235/web/Uli_laptop_long.svg" alt="SVG caricature of Uli Troyo" width="300"/>
+        <svg class="header__greeting" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com" viewBox="0 0 478 300" width="250">
+          <linearGradient id="svg-gradient" x1="0%" y1="0%" x2="100%" y2="70%">
+            <stop offset="0%" stop-color="var(--color-stop1)"/>
+            <stop offset="100%" stop-color="var(--color-stop2)"/>
+          </linearGradient>
+          <path class="header__greeting-box" fill="#181818" d="M0 0h478v300H0z" bx:origin="0 0"/>
+          <text fill="#fff" font-family="Roboto Mono, Lucida Console, Monaco, monospace" font-size="24" font-weight="400" style="line-height:40px" transform="translate(10 30)" white-space="pre">
+            <tspan x="26" y="26" class="bash-dollar">$</tspan>
+            <tspan>Hi! I'm Uli Troyo, a web</tspan>
+            <tspan x="26" dy="1em">engineer and artist from</tspan>
+            <tspan x="26" dy="1em">Miami, FL.</tspan>
+            <tspan x="26" dy="1.5em" class="bash-dollar">$</tspan>
+            <tspan>This site is presently</tspan>
+            <tspan x="26" dy="1em">under heavy construction,</tspan>
+            <tspan dx="-0.5em">but</tspan>
+            <tspan x="26" dy="1em">you can check out my current
+            </tspan>
+            <tspan x="26" dy="1em">
+              <a href="#main" class="svg-link">portfolio</a>,
+            </tspan>
+            <tspan>my
+            </tspan>
+            <tspan>
+              <a href="https://codepen.io/UliTroyo" class="svg-link">Codepen</a>,</tspan>
+            <tspan>or my</tspan>
+            <tspan x="26" dy="1em">
+              <a href="https://github.com/UliTroyo" class="svg-link">
+                Github
+              </a>
+            </tspan>
+            <tspan>to see what I've been</tspan>
+            <tspan x="26" dy="1em">​up to.</tspan>
+          </text>
+        </svg>
+      </div>
+    </header>
+    <main id="main" class="main">
+      <section class="main__intro">
+        <h2 class="main__heading">Projects</h2>
+
+        <p class="desc-p">This is a list of my most current projects. I am presently in the middle of a major portfolio overhaul to represent my newfound interest in SVG-centric front-end development, and this section is being updated often.</p>
+        <p class="desc-p">If you're interested in seeing more work, please check out my
+          <a href="https://codepen.io/UliTroyo">Codepen</a>. That's where I prototype most of my work. The rest of my work is mostly available in my public
+          <a href="https://github.com/UliTroyo">Github</a>
+          repos, though I'm still in the process of moving a number of local projects there.</p>
+      </section>
+
+      <article class="article">
+        <a href="https://uli-github-finder.netlify.com/" class="article__img-link"><img class="article__img" srcset="https://res.cloudinary.com/ulitroyo/image/upload/v1568945394/web/github-finder_screen.jpg 200w, https://res.cloudinary.com/ulitroyo/image/upload/v1568945394/web/github-finder_screen.jpg 400w, https://res.cloudinary.com/ulitroyo/image/upload/v1568945394/web/github-finder_screen.jpg 800w, https://res.cloudinary.com/ulitroyo/image/upload/v1568945394/web/github-finder_screen.jpg 1600w" sizes="(max-width: 800px) 300px, 500px" src="https://res.cloudinary.com/ulitroyo/image/upload/v1568945394/web/github-finder_screen.jpg" alt="Github Finder"></a>
+        <section class="article__description">
+          <header>
+            <ul class="article__tags">
+              <li>React</li>
+              <li>Bootstrap</li>
+              <li>Axios</li>
+              <li>Github API</li>
+            </ul>
+            <h2 class="article__heading">Github Finder</h2>
+          </header>
+          <p class="desc-p">This app is a demo using modern React, using
+            <a href="https://reactjs.org/docs/hooks-intro.html">React Hooks</a>, the
+            <a href="https://reactjs.org/docs/context.html">Context API</a>, and
+            <a href="https://reacttraining.com/react-router/">React Router</a>
+            to fetch data from the Github API and present the user with a list of Github users.</p>
+          <footer class="article__footer">
+            <a class="article__link" href="https://uli-github-finder.netlify.com/">View Project</a>
+          </footer>
+        </section>
+      </article>
+
+      <article class="article">
+        <a href="https://ulitroyo.com/" class="article__img-link"><img class="article__img" srcset="https://res.cloudinary.com/ulitroyo/image/upload/v1568946758/web/ulitroyo_screen.jpg 200w, https://res.cloudinary.com/ulitroyo/image/upload/v1568946758/web/ulitroyo_screen.jpg 400w, https://res.cloudinary.com/ulitroyo/image/upload/v1568946758/web/ulitroyo_screen.jpg 800w, https://res.cloudinary.com/ulitroyo/image/upload/v1568946758/web/ulitroyo_screen.jpg 1600w" sizes="(max-width: 800px) 300px, 500px" src="https://res.cloudinary.com/ulitroyo/image/upload/v1568946758/web/ulitroyo_screen.jpg" alt="Ulitroyo.com"></a>
+        <section class="article__description">
+          <header>
+            <ul class="article__tags">
+              <li>11ty</li>
+              <li>Nunjucks</li>
+              <li>Ghost</li>
+              <li>Nginx</li>
+            </ul>
+            <h2 class="article__heading">Ulitroyo.com</h2>
+          </header>
+          <p class="desc-p">This site pulls data from a
+            <a href="https://ghost.org/docs/">Ghost</a>
+            instance used as a data back-end, and on update rebuilds a static version using the
+            <a href="https://www.11ty.io/docs/">11ty</a>
+            engine. It's still a work in progress, as some of it is not truly dynamic yet, and I haven't imported my blog, but we're getting there.</p>
+          <footer class="article__footer">
+            <a class="article__link" href="https://ulitroyo.com/">View Project</a>
+          </footer>
+        </section>
+      </article>
+
+      <article class="article">
+        <a href="https://codepen.io/UliTroyo/live/RzyBzp" class="article__img-link"><img class="article__img" srcset="https://res.cloudinary.com/ulitroyo/image/upload/v1568947882/web/react-todo_screen.jpg 200w, https://res.cloudinary.com/ulitroyo/image/upload/v1568947882/web/react-todo_screen.jpg 400w, https://res.cloudinary.com/ulitroyo/image/upload/v1568947882/web/react-todo_screen.jpg 800w, https://res.cloudinary.com/ulitroyo/image/upload/v1568947882/web/react-todo_screen.jpg 1600w" sizes="(max-width: 800px) 300px, 500px" src="https://res.cloudinary.com/ulitroyo/image/upload/v1568947882/web/react-todo_screen.jpg" alt="React To-Do App"></a>
+        <section class="article__description">
+          <header>
+            <ul class="article__tags">
+              <li>React</li>
+              <li>Codepen</li>
+            </ul>
+            <h2 class="article__heading">React To-Do App</h2>
+          </header>
+          <p class="desc-p">This is a pretty standard to-do app using class-based React. It's fairly banal, to be honest, but given the amount of interest there is in React right now, and given that I'm still in the process of polishing my larger React projects for release, this app is getting some visibility. Among the interesting bits are a concise little function I made for assigning unique IDs for new list items, and a
+            <code style="background-color:hsl(240, 80%, 92%);">repeat(auto-fit, minmax)</code>
+            CSS grid layout to break the monotony of horizontal to-do apps.
+          </p>
+          <footer class="article__footer">
+            <a class="article__link" href="https://codepen.io/UliTroyo/live/RzyBzp">View Project</a>
+          </footer>
+        </section>
+      </article>
+
+      <article class="article">
+        <a href="https://ulitroyo.github.io/binary-calculator/" class="article__img-link"><img class="article__img" srcset="https://res.cloudinary.com/ulitroyo/image/upload/v1568948166/web/binary-calculator_screen.jpg 200w, https://res.cloudinary.com/ulitroyo/image/upload/v1568948166/web/binary-calculator_screen.jpg 400w, https://res.cloudinary.com/ulitroyo/image/upload/v1568948166/web/binary-calculator_screen.jpg 800w, https://res.cloudinary.com/ulitroyo/image/upload/v1568948166/web/binary-calculator_screen.jpg 1600w" sizes="(max-width: 800px) 300px, 500px" src="https://res.cloudinary.com/ulitroyo/image/upload/v1568948166/web/binary-calculator_screen.jpg" alt="Binary Calculator"></a>
+        <section class="article__description">
+          <header>
+            <ul class="article__tags">
+              <li>Inline SVG</li>
+              <li>JavaScript State Machines</li>
+            </ul>
+            <h2 class="article__heading">Binary Calculator</h2>
+          </header>
+          <p class="desc-p">This binary calculator is a working experiment in using inline SVG markup as the GUI of a JavaScript application, rather than CSS and images. The application is written using
+            <a href="https://en.wikipedia.org/wiki/Finite-state_machine">state machines</a>
+            to handle behavior.</p>
+          <footer class="article__footer">
+            <a class="article__link" href="https://ulitroyo.github.io/binary-calculator/">View Project</a>
+          </footer>
+        </section>
+      </article>
+
+      <article class="article">
+        <a href="https://codepen.io/UliTroyo/live/jONqVLY" class="article__img-link"><img class="article__img" srcset="https://res.cloudinary.com/ulitroyo/image/upload/v1568952526/web/hsl-rgb-sliders_screen.jpg 200w, https://res.cloudinary.com/ulitroyo/image/upload/v1568952526/web/hsl-rgb-sliders_screen.jpg 400w, https://res.cloudinary.com/ulitroyo/image/upload/v1568952526/web/hsl-rgb-sliders_screen.jpg 800w, https://res.cloudinary.com/ulitroyo/image/upload/v1568952526/web/hsl-rgb-sliders_screen.jpg 1600w" sizes="(max-width: 800px) 300px, 500px" src="https://res.cloudinary.com/ulitroyo/image/upload/v1568952526/web/hsl-rgb-sliders_screen.jpg" alt="Color Sliders"></a>
+        <section class="article__description">
+          <header>
+            <ul class="article__tags">
+              <li>JavaScript</li>
+              <li>Responsive CSS</li>
+            </ul>
+            <h2 class="article__heading">Color Sliders</h2>
+          </header>
+          <p class="desc-p">I made this pair of color sliders as part of an article I'm writing on
+            <a href="https://en.wikipedia.org/wiki/HSL_and_HSV">HSL color theory</a>. They are meant to illustrate both the difficulty of manipulating raw hexadecimal RGB colors in design, and the ease and intuitiveness of doing the same with HSL colors.</p>
+          <footer class="article__footer">
+            <a class="article__link" href="https://codepen.io/UliTroyo/live/jONqVLY">View Project</a>
+          </footer>
+        </section>
+      </article>
+
+      <article class="article">
+        <a href="https://ulitroyo.github.io/hsl-color-steps-demo/" class="article__img-link"><img class="article__img" srcset="https://res.cloudinary.com/ulitroyo/image/upload/v1568953116/web/color-steps-demo_screen.jpg 200w, https://res.cloudinary.com/ulitroyo/image/upload/v1568953116/web/color-steps-demo_screen.jpg 400w, https://res.cloudinary.com/ulitroyo/image/upload/v1568953116/web/color-steps-demo_screen.jpg 800w, https://res.cloudinary.com/ulitroyo/image/upload/v1568953116/web/color-steps-demo_screen.jpg 1600w" sizes="(max-width: 800px) 300px, 500px" src="https://res.cloudinary.com/ulitroyo/image/upload/v1568953116/web/color-steps-demo_screen.jpg" alt="HSL Color Step Demo"></a>
+        <section class="article__description">
+          <header>
+            <ul class="article__tags">
+              <li>Inline SVG</li>
+              <li>javascript state machines</li>
+            </ul>
+            <h2 class="article__heading">HSL Color Step Demo</h2>
+          </header>
+          <p class="desc-p">This is another demo app I made for the HSL article I'm writing. Though similar in interface to the RBG and HSL color sliders (as it also incorporates triple sliders for input), this app instead is meant to illustrate accessibility best practices for digital color design. The output is a table of HSL values given a specific hue and a range of steps on the lightness and saturation spectrum.</p>
+          <footer class="article__footer">
+            <a class="article__link" href="https://ulitroyo.github.io/hsl-color-steps-demo/">View Project</a>
+          </footer>
+        </section>
+      </article>
+
+      <article class="article">
+        <div class="wip__label">Work in Progress</div>
+        <a href="https://dvorak.app/" class="article__img-link">
+          <img class="article__img" srcset="https://res.cloudinary.com/ulitroyo/image/upload/v1568955461/web/dvorak-app_screen.jpg 200w, https://res.cloudinary.com/ulitroyo/image/upload/v1568955461/web/dvorak-app_screen.jpg 400w, https://res.cloudinary.com/ulitroyo/image/upload/v1568955461/web/dvorak-app_screen.jpg 800w, https://res.cloudinary.com/ulitroyo/image/upload/v1568955461/web/dvorak-app_screen.jpg 1600w" sizes="(max-width: 800px) 300px, 500px" src="https://res.cloudinary.com/ulitroyo/image/upload/v1568955461/web/dvorak-app_screen.jpgv" alt="Dvorak App"></a>
+        <section class="article__description wip__body">
+          <header>
+            <ul class="article__tags">
+              <li>Inline SVG</li>
+              <li>React</li>
+              <li>Redux</li>
+              <li>Node.js</li>
+            </ul>
+            <h2 class="article__heading wip__heading">Dvorak.app</h2>
+          </header>
+          <p class="desc-p">This is my largest current ongoing project; it is a web app for learning the Dvorak keyboard layout. I still haven't decided whether to use Passport for auth, or use
+            <a href="https://firebase.google.com/docs/auth">Firebase Authentication</a>— in general I'm attracted to Google's cloud platform offerings. I'm writing a custom analytics engine, because I want to display the user's data on an incremental iteration of what I did with my binary calculator, using inline SVG as the primary GUI.
+          </p>
+          <footer class="article__footer">
+            <a class="article__link" href="https://dvorak.app/">View Project</a>
+          </footer>
+        </section>
+      </article>
+
+    </main>
+    <footer class="footer">
+      <!-- Begin Mailchimp Signup Form -->
+      <div id="mc_embed_signup">
+        <form action="https://gmail.us4.list-manage.com/subscribe/post?u=fa3738b7a6ebaafa553d90703&amp;id=7854236a04" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+          <div id="mc_embed_signup_scroll">
+            <label for="mce-EMAIL">Subscribe to new posts!</label>
+            <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_fa3738b7a6ebaafa553d90703_7854236a04" tabindex="-1" value=""></div>
+            <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+          </div>
+        </form>
+      </div>
+
+      <!--End mc_embed_signup-->
+      <ul class="footer__links">
+        <li>
+          <a class="footer__link" href="/">home</a>
+        </li>
+        <li>
+          <a class="footer__link" href="#main">portfolio</a>
+        </li>
+        <li>
+          <a class="footer__link" href="/about/">about</a>
+        </li>
+        <li>
+          <a class="footer__link" href="/contact/">contact</a>
+        </li>
+        <li>
+          <a class="footer__link" href="https://codepen.io/uliTroyo">codepen</a>
+        </li>
+        <li >
+          <a class="footer__link" href="https://github.com/UliTroyo">github</a>
+        </li>
+        <li>
+          <a class="footer__link" href="https://twitter.com/UliTroyo">twitter</a>
+        </li>
+      </ul>
+      <p class="copyright">&copy; Uli Troyo 2019</p>
+    </footer>
+    <script defer>
+      var menuBtn = document.getElementById("menu-button");
+      var menu = document.getElementById("nav-menu");
+      var nav = document.querySelector('nav.nav');
+
+      menuBtn.addEventListener('click', function () {
+        if (menu.classList.contains('nav__menu--visible')) {
+          this.setAttribute('aria-expanded', 'false');
+          menuBtn.textContent = "Menu";
+          menuBtn
+            .classList
+            .remove('nav__menu-button--fixed');
+          menu
+            .classList
+            .remove('nav__menu--visible');
+          nav
+            .classList
+            .remove('nav--active');
+        } else {
+          menuBtn.textContent = "Close";
+          menuBtn
+            .classList
+            .add('nav__menu-button--fixed');
+          menu
+            .classList
+            .add('nav__menu--visible');
+          nav
+            .classList
+            .add('nav--active');
+          this.setAttribute('aria-expanded', 'true');
+        }
+      });
+    </script>
+  </body>
+
+</html>

@@ -1,0 +1,22 @@
+{
+  "name": "ulitroyo",
+  "version": "1.1.0",
+  "description": "An Eleventy and Ghost collaborative effort to put Uli Troyo on the web.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UliTroyo/ulitroyo.git"
+  },
+  "author": "Uli Troyo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/UliTroyo/ulitroyo/issues"
+  },
+  "homepage": "https://github.com/UliTroyo/ulitroyo#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.9.0"
+  }
+}
