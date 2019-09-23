@@ -6,6 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
+    <meta property="og:title" content="ulitroyo.com">
+    <meta name="author" content="Uli Troyo">
+    <meta property="og:site_name" content="Uli Troyo">
+    <meta name="description" content="Uli Troyo's web residence">
+    <meta property="og:description" content="Uli Troyo's web residence">
+    <meta property="og:image" content="https://res.cloudinary.com/ulitroyo/image/upload/v1568946758/web/ulitroyo_screen.jpg">
+
     <style>
       body {
         background-color: #485b93;
@@ -58,14 +65,15 @@
       }
     </style>
 
-    <link href="https://fonts.googleapis.com/css?family=Domine&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Domine&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/assets/uli.1.1.0.css">
-    <title>Uli Troyo</title>
+    <link rel="canonical" href="https://ulitroyo.com/">
+    <title>Blog</title>
   </head>
 
   <body>
     <nav class="nav" id="main-nav" aria-label="Main Navigation">
-      <a href="#main" class="skip-to-content">Skip to main content</a>
+      <a href="/#main" class="skip-to-content">Skip to main content</a>
       <svg id="uli-logo" class="nav__svg" xmlns="http://www.w3.org/2000/svg" xmlns:serif="http://www.serif.com/" xmlns:xlink="http://www.w3.org/1999/xlink" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" clip-rule="evenodd" viewBox="0 0 650 550" width="200">
         <a class="nav__home" href="/">
           <g role="image" alt="Uli Troyo's logo, which is also a link to home" id="uli-troyo" transform="translate(25 50)">
@@ -137,7 +145,7 @@
         </svg>
 
         <li role="none">
-          <a href="#main" class="nav__link" role="menuitem">portfolio</a>
+          <a href="/#main" class="nav__link" role="menuitem">portfolio</a>
         </li>
         <svg class="divider" role="none" viewBox="0 0 6 6" width="6">
           <circle cx="3" cy="3" r="3" fill="white" stroke-width="0"/>
@@ -182,7 +190,7 @@
           <a class="footer__link" href="/">home</a>
         </li>
         <li>
-          <a class="footer__link" href="#main">portfolio</a>
+          <a class="footer__link" href="/#main">portfolio</a>
         </li>
         <li>
           <a class="footer__link" href="/about/">about</a>
